@@ -43,37 +43,30 @@ void absent();
 // 프로그램 종료 처리 (옵션)
 void exitProgram();
 
-*/
+#include <stdio.h>
 
-
-int main() {
-    
-    printf("--- C언어 미니 프로젝트 시작! ---\n");
-
-    /*
-        3. #include <stdio.h>
-
-void 출석() { printf("출석!\n"); }
-void 결석() { printf("결석!\n"); }
+void attend() { printf("출석 처리 완료!\n"); }
+void absent() { printf("결석 처리 완료!\n"); }
 
 int main() {
-    int 선택;
+    int menu;
+
+    printf("=== 프로그램 시작 ===\n");
 
     while (1) {
-        printf("1.출석  2.결석  0.종료\n선택: ");
-        scanf("%d", &선택);
+        printf("\n1. 출석\n2. 결석\n0. 종료\n선택: ");
+        scanf("%d", &menu);
 
-        if (선택 == 1) 출석();
-        else if (선택 == 2) 결석();
-        else if (선택 == 0) break;
-        else printf("잘못된 입력\n");
+        if (menu == 1)
+            attend();
+        else if (menu == 2)
+            absent();
+        else if (menu == 0)
+            break;
+        else
+            printf("잘못된 입력입니다.\n");
     }
 
-    return 0;
-}
-
-    */
-    
-    
+    printf("=== 프로그램 종료 ===\n");
     return 0;
 }
